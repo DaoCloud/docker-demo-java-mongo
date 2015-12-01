@@ -1,0 +1,12 @@
+web:
+  build: .
+  ports:
+    - "8080:8080"
+  links:
+    - mongo:mongo
+  command: java -Djava.security.egd=file:/dev/./urandom -jar /app.jar
+
+mongo:
+  image: daocloud.io/library/mongo:latest
+  ports:
+    - "27017:27017"
