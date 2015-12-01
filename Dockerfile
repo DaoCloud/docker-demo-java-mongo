@@ -1,4 +1,4 @@
-FROM maven：3.3.3
+FROM maven:3.3.3
 
 ADD pom.xml /tmp/build/
 RUN cd /tmp/build && mvn -q dependency:resolve
